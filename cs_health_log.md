@@ -189,15 +189,15 @@ In the following image, you can see the location of the sources that you can con
     :   `/var/log/kube-proxy.log`
     :   `/var/log/event-exporter/1..log`
 
-6. `kube-audit`: Information about cluster-related actions that is sent to the Kubernetes API server, including the time, the user, and the affected resource.
-
-7. `ingress`: Information about the network traffic that comes into a cluster through the Ingress ALB.
+6. `ingress`: Information about the network traffic that comes into a cluster through the Ingress ALB.
 
     Paths
     :   `/var/log/alb/ids/*.log`
     :   `/var/log/alb/ids/*.err`
     :   `/var/log/alb/customerlogs/*.log`
     :   `/var/log/alb/customerlogs/*.err`
+
+7. `kube-audit`: Information about cluster-related actions that is sent to the Kubernetes API server, including the time, the user, and the affected resource. The `kube-audit` source can be configured with a webhook, opposed to fluentd that's used for the other sources. See the [docs](/docs/containers?topic=containers-health-audit#audit-api-server-external) for further information.
 
 
 **Am I responsible for keeping Fluentd updated?**
